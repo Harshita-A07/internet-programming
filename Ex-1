@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The map and area elements</h1>
+
+<p>Click on the Animals,to read more about the topic:</p>
+
+
+<img src="animals.jpg" alt="can't open image" usemap="#workmap" width="400" height="320">
+<map name="workmap">
+<area shape="rect" coords="239,198,354,290" alt="sheep" href="sheep.html">
+<area shape="rect" coords="41,159,223,296" alt="cow" href="cow.html">
+<area shape="rect" coords="41,20,180,149" alt="goat" href="goat.html">
+<area shape="rect" coords="222,18,371,180" alt="camel" href="camel.html">
+ 
+   
+</map>
+
+
+</body>
+</html>
