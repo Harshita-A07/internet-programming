@@ -1,0 +1,278 @@
+Student_form.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form Using Table in HTML</title>
+    <style>
+        h2 {
+            font-family: Sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: bold;
+            color: pink;
+            text-align: center;
+            
+        }
+        table{
+            font-family: verdana;
+            color: white;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: bold;
+            background: lightgrey;
+            border-collapse: collapse;
+            border: 7px solid #000000;
+            border-style: double;
+        }
+        table.inner {
+            border: 100px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="select"]{
+            width: 90%;
+            padding: 6px 12px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 25%;
+            background-color: grey;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border:none;
+            box-sizing: border-box;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Student information</h2>
+   <center>
+    <table cellpadding="10">
+     
+       <form action="/action_page.php">
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" name="last_name"></td>
+        </tr>
+
+<tr>
+            <td>date of birth:</td>
+            <td>
+<input type="date" id="birthday" name="birthday" ></td>
+        </tr>
+            <tr>
+            <td>gender:</td>
+            <td><input type="text" name="last_name" value="male/female"style=color:grey></td>
+        </tr>
+            <tr>
+            <td>citizen of which country:</td>
+            <td><input type="text" name="last_name" style=color:grey></td>
+        </tr>
+        <tr>
+            <td>phone number:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+         
+                <tr>
+            <td>Email:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+    
+</tr>
+
+
+
+<tr>
+            <td>do you know any otherlanguages:</td>
+            <td>
+              <select name="cars" id="cars">
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+  
+</select>
+             <tr>
+            <td>Religion:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr> 
+         <tr>
+            <td>Caste:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        </tr>
+        
+</tr>
+        <tr>
+            <td>address:</td>
+            <td><textarea id="w3review" name="w3review" rows="4" cols="50">Address</textarea></td>
+        </tr>
+        <tr>
+            <td>father name:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td>father phone number:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td>occupation:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td>mother name:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td>mother phone number:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td>occupation:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Submit">
+                <input type="submit" formaction="next.html"
+                value="next">
+            </td>
+        </tr>
+        </form>
+        
+    </table>
+    </center>
+    
+</body>
+</html>
+
+ 
+
+
+next.html
+<!DOCTYPE html>
+<html>
+<title>Student Registration Form </title>
+<style>
+h2 {
+font-family: Sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: bold;
+color: pink;
+text-align: center;
+
+}
+table{
+font-family: verdana;
+color: white;
+font-size: 14px;
+font-style: normal;
+font-weight: bold;
+background: lightgrey;
+border-collapse: collapse;
+border: 7px solid #000000;
+border-style: double;
+}
+table.inner {
+border: 100px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="select"]{
+width: 90%;
+padding: 6px 12px;
+margin: 5px 0;
+box-sizing: border-box;
+}
+input[type="submit"] {
+width: 25%;
+background-color: grey;
+padding: 14px 20px;
+margin: 8px 0;
+border:none;
+box-sizing: border-box;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+<h2> Academic details</h2>
+<center>
+<table cellpadding="10">
+
+<form action="/action_page.php">
+<tr>
+<td>highschoolname:</td>
+<td><input type="text" name="first_name"></td>
+</tr>
+
+<tr>
+<td>graduation date:</td>
+<td>
+<input type="date" id="birthday" name="birthday" >
+
+
+</td>
+<tr>
+<td>city:</td>
+<td><input type="text" name="last_name"></td>
+</tr>
+<tr>
+<td>state:</td>
+<td><input type="text" name="last_name"></td>
+</tr>
+
+</tr>
+<tr>
+<td>school name:</td>
+<td><input type="text" name="first_name"></td>
+</tr>
+<tr>
+<td>10th mark:</td>
+<td><input type="text" name="first_name"></td>
+</tr>
+<tr>
+<td>percentage:</td>
+<td><input type="text" name="first_name"></td>
+</tr>
+<tr>
+<td>school name:</td>
+<td><input type="text" name="first_name"></td>
+</tr>
+<tr>
+<td>12th mark:</td>
+<td><input type="text" name="first_name"></td>
+</tr>
+
+<tr>
+<td>percentage:</td>
+<td><input type="text" name="first_name"></td>
+</tr>
+<tr>
+
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="submit" formaction="next.html"
+value="next">
+</td>
+</tr>
+</form>
+
+</table>
+</center>
+</html>
+
+
