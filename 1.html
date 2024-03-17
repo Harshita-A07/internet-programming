@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown</title>
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+x
+  .button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Style for the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px 0;
+  }
+
+  /* Style for the dropdown option */
+  .dropdown-option {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  /* Style for the dropdown option on hover */
+  .dropdown-option:hover {
+    background-color: #ddd;
+  }
+
+  /* Show the dropdown content when hovering over the dropdown container */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Hide the dropdown content when clicked or hovered outside of the dropdown
+  $(document).on('click', function(event) {
+    if (!$(event.target).closest('.dropdown').length) {
+      $('.dropdown-content').hide();
+    }
+  });
+
+  // Hide the dropdown content when the mouse leaves the dropdown area
+  $('.dropdown').mouseleave(function() {
+    $('.dropdown-content').hide();
+  });
+
+  // Handle click on dropdown option
+  $('.dropdown-option').click(function() {
+    var value = $(this).text();
+    $('.button').text(value);
+    $('.dropdown-content').hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<div class="dropdown">
+  
+  <button class="button">Choose an era</button>
+  
+  <div class="dropdown-content">
+    <div class="dropdown-option">red</div>
+    <div class="dropdown-option">reputation</div>
+    <div class="dropdown-option">1989</div>
+    <div class="dropdown-option">folklore</div>
+  </div>
+</div>
+
+</body>
+</html>
