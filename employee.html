@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h2>Employee Details</h2>
+    <label for="empId">Enter Employee ID:</label>
+    <input type="text" id="empId" name="empId">
+    <button onclick="fetchEmployeeDetails()">Get Details</button>
+    <div id="employeeDetails"></div>
+
+    <script>
+        function fetchEmployeeDetails() {
+            var empId = document.getElementById("empId").value;
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var xmlDoc = xhr.responseXML;
+                    var employee = findEmployeeById(xmlDoc, empId);
+                    displayEmployeeDetails(employee);
+                }
+            };
+            xhr.open("GET", "employees.xml", true);
+            xhr.send();
+        }
+
+        function findEmployeeById(xmlDoc, empId) {
+            var employees = xmlDoc.getElementsByTagName("employee");
+            for (var i = 0; i < employees.length; i++) {
+                var id = employees[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+                if (id === empId) {
+                    var name = employees[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                    var position = employees[i].getElementsByTagName("position")[0].childNodes[0].nodeValue;
+                    var department = employees[i].getElementsByTagName("department")[0].childNodes[0].nodeValue;
+                    return {
+                        id: id,
+                        name: name,
+                        position: position,
+                        department: department
+                    };
+                }
+            }
+            return null;
+        }
+
+        function displayEmployeeDetails(employee) {
+            var details = "";
+            if (employee) {
+                details += "<p>ID: " + employee.id + "</p>";
+                details += "<p>Name: " + employee.name + "</p>";
+                details += "<p>Position: " + employee.position + "</p>";
+                details += "<p>Department: " + employee.department + "</p>";
+            } else {
+                details = "<p>No employee found with the given ID.</p>";
+            }
+            document.getElementById("employeeDetails").innerHTML = details;
+        }
+    </script>
+</body>
+</html>
+
